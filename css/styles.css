@@ -34,7 +34,7 @@ ol {
 /*=========     HEADER     =========*/
 /***********************************/
 .navbar-default {
-  background-color: #212121;
+  background-color: #141414;
   border: none;
   font-family: "Kaushan Script"; }
   .navbar-default .navbar-brand {
@@ -62,28 +62,28 @@ ol {
 /*=========     BANNER     =========*/
 /***********************************/
 .header {
-  background: url(../imagenes/banner.jpg) center center/cover;
+  background: url(../imagenes/banner2.jpg) center center/cover;
   background-attachment: fixed;
-  background-repeat: round;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
-  height: 70vh;
-  margin-bottom: -20px; }
+  height: 70vh; }
 
 .intro-text {
   padding: 100px 0 100px;
   color: #fff;
   font-family: "Kaushan Script";
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .intro-text p {
     font-family: "Kaushan Script";
     font-size: 25px;
-    color: #EFEBE9; }
+    color: #FF9800; }
   .intro-text h1 {
     font: "Kaushan Script";
     margin-bottom: 25px;
     font-size: 77px;
-    color: #EFEBE9; }
+    color: #FF9800; }
 
 /*********animacion*************/
 .animated {
@@ -107,8 +107,8 @@ ol {
   animation-name: fadeInUp; }
 
 .animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
@@ -121,40 +121,203 @@ ol {
     opacity: 1;
     -webkit-transform: none;
     transform: none; } }
+/**************************************/
+/*=========     PORTFOLIO     =========*/
+/**************************************/
+#Portfolio {
+  background: #212121;
+  margin-bottom: -20px; }
+  #Portfolio h2 {
+    color: #FF9800; }
+  #Portfolio p {
+    color: #FF9800; }
+
+.portfolio-item {
+  margin: 0 auto 40px;
+  max-width: 400px; }
+  .portfolio-item figure {
+    position: relative;
+    width: 76%; }
+    .portfolio-item figure div {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(254, 209, 54, 0.8);
+      opacity: 0;
+      transition: 500ms;
+      -ms-transition: 500ms;
+      -webkit-transition: 500ms; }
+      .portfolio-item figure div span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color: #FF9800;
+        font-size: 50px;
+        transform: translate(-50%, -50%) scale(0);
+        transition: 300ms;
+        -ms-transition: 300ms;
+        -webkit-transition: 300ms; }
+    .portfolio-item figure:hover div {
+      opacity: 1; }
+      .portfolio-item figure:hover div span {
+        transform: translate(-50%, -50%) scale(1); }
+
+.portfolio-caption {
+  background-color: #212121;
+  padding: 20px 0; }
+  .portfolio-caption h4 {
+    margin: 0;
+    color: #FF9800; }
+  .portfolio-caption p {
+    font-style: italic;
+    font-size: 16px;
+    color: #FF9800; }
+
 /***************************************/
 /*=========    about    =========*/
 /*************************************/
 .about {
-  background: #212121;
-  margin-top: 0; }
+  background: url(../imagenes/banner.jpg) center center/cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center; }
   .about h3 {
-    color: #FF9800;
+    color: white;
     padding: 15px; }
   .about p {
-    color: #FF9800;
+    color: white;
     font-family: 'Lato', sans-serif;
-    font-size: 20px; }
+    font-size: 20px;
+    text-shadow: 1px; }
 
 figure {
-  width: 82%;
+  width: 70%;
   margin: auto; }
 
 .foto {
-  max-width: 90%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 5%;
   border: 1px black solid; }
 
 .separador {
   padding: 30px; }
 
-/**************************************/
-/*=========     PORTFOLIO     =========*/
-/**************************************/
 /************************************/
-/*=========     ABOUT     =========*/
+/*=========     Contact    =========*/
 /**********************************/
+#Contact {
+  background: url(../images/map-image.png) no-repeat center 100px #222; }
+
+.section-title {
+  color: #FF9800;
+  margin-top: 0; }
+
+.text-muted {
+  color: #FF9800;
+  padding: 10px; }
+
+#contact-form .form-control {
+  padding: 0 20px;
+  font-family: "Montserrat";
+  height: 65px;
+  margin-bottom: 20px;
+  font-size: 16px; }
+#contact-form textarea.form-control {
+  padding: 20px;
+  height: 235px; }
+#contact-form .btn-lg {
+  padding: 20px 30px;
+  color: #fff;
+  border-radius: 8; }
+
 /***********************************/
-/*=========     TEAM     =========*/
+/*=========     Footer    =========*/
 /*********************************/
+.footer {
+  background: #141414; }
+  .footer .container {
+    height: 100%; }
+  .footer .text-center {
+    padding: 20px; }
+  .footer li:nth-child(1) {
+    background: #334681; }
+  .footer li:nth-child(2) {
+    background: black; }
+  .footer li:nth-child(3) {
+    background: #5373A6; }
+  .footer li:nth-child(4) {
+    background: #03639F; }
+  .footer li:nth-child(5) {
+    background: #B41D12; }
+  .footer div p {
+    color: #FF9800; }
+
+.iconos1 {
+  font-size: 25px;
+  color: white;
+  line-height: 38px; }
+
+.iconos li {
+  display: inline-block;
+  margin: 6px;
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 40px;
+  width: 40px; }
+  .iconos li a {
+    display: block;
+    border-radius: 50%;
+    transition: 600ms;
+    -ms-transition: 600ms;
+    -webkit-transition: 600ms; }
+    .iconos li a:hover {
+      transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      background-color: #FF9800;
+      color: #222; }
+
+/***********************************/
+/*=========     carta    =========*/
+/*********************************/
+.contenedorc {
+  width: 98%;
+  height: 350px;
+  margin: auto;
+  -webkit-perspective: 700; }
+
+.carta {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 2s; }
+
+.carta:hover {
+  transform: rotateY(180deg); }
+
+.lado {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute; }
+
+.frente {
+  border-radius: 5%; }
+
+.atras {
+  transform: rotateY(180deg);
+  border-radius: 5%; }
+
+/******************************************/
+/*=========     MEDIA-QUERIES    =========*/
+/******************************************/
+@media screen and (max-width: 992px) {
+  .about figure img {
+    max-width: 70%; } }
 
 /*# sourceMappingURL=styles.css.map */

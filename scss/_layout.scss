@@ -3,23 +3,20 @@
 /***********************************/
 
 
-
 /*************************************/
 /*=========     HEADER     =========*/
 /***********************************/
-.container{
-  
-}
+
 
 .navbar-default{
-    background-color: #212121;
+    background-color: $fourth-color;
     border: none;
     font-family: $base-font;
 
 
 
 .navbar-brand{
-    color: #FF9800;
+    color: $base-color;
     font-family: $comp-font;
     &:hover,
     &:active,
@@ -29,42 +26,42 @@
   }
 
  .navbar-toggle{
-        border: none;
-        background-color: #FF9800;
-        color: #fff;
-        &:hover{
-          background: #9FEAF4;
-            }
-          }
-
-
-
-.navbar-nav{
-      >li{
-        >a{
-          
-          color: #FF9800;
-          background-color: transparent;
-          text-transform: uppercase;
-          &:hover,
-          &:active,
-          &:focus{
-             color: #FF5722;
-          }
-
-      >.active{
-        >a{
-          color: #FF9800;
-          background-color: #FF5722;
-            }
-          }
-
+    border: none;
+    background-color: #FF9800;
+    color: #fff;
+    &:hover{
+      background: #9FEAF4;
         }
       }
 
 
+
+.navbar-nav{
+    >li{
+      >a{
+        
+        color: $base-color;
+        background-color: transparent;
+        text-transform: uppercase;
+        &:hover,
+        &:active,
+        &:focus{
+           color: #FF5722;
+        }
+
+    >.active{
+      >a{
+        color: #FF9800;
+        background-color: #FF5722;
+          }
+        }
+
+      }
     }
-    
+
+
+  }
+  
 
 
   }
@@ -75,34 +72,34 @@
 /***********************************/
 
  .header{
-    background: url(../imagenes/banner.jpg) center center/cover;
-    background-attachment: fixed;
-    background-repeat: round;
-    color: white;
-    text-align: center;
-    height: 70vh;
-    margin-bottom: -20px;
+      background: url(../imagenes/banner2.jpg) center center/cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      height: 70vh;
 
 } 
  
  .intro-text{
-    padding: 100px 0 100px;
-    color: #fff;
-    font-family: $base-font;
-    text-align: center;
+      padding: 100px 0 100px;
+      color: #fff;
+      font-family: $base-font;
+      text-align: center;
+      position: relative;
 
 
     p{
       font-family: $base-font;
       font-size: 25px;
-      color: $base-color;
-    }
+      color: #FF9800;
+      }
 
     h1{
       font: $base-font;
       margin-bottom: 25px;
       font-size: 77px;
-      color: $base-color;
+      color: #FF9800;
       }
   }
 
@@ -133,8 +130,8 @@
 }
 
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
@@ -155,54 +152,159 @@
 }
 
 
+/**************************************/
+/*=========     PORTFOLIO     =========*/
+/**************************************/
+
+#Portfolio{
+  background: #212121;
+  margin-bottom: -20px;
+
+  h2{
+     color:$base-color;
+    }
+  p{
+     color:$base-color;
+   }
+}
+
+.portfolio-item{
+  margin: 0 auto 40px;
+  max-width: 400px;
+  figure{
+    position: relative;
+    width: 76%;
+    div{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(254,209,54,0.8);
+      opacity: 0;
+      @include ttion(500ms);
+      span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        color:$base-color;
+        font-size: 50px;
+        transform: translate(-50%,-50%) scale(0);
+        @include ttion(300ms);
+      }
+    }
+    &:hover{
+      div{
+        opacity: 1;
+        span{
+          transform: translate(-50%,-50%) scale(1);
+        }
+      }
+    }
+  }
+}
+
+.portfolio-caption{
+  background-color: #212121;
+  padding: 20px 0;
+
+      h4{
+        margin: 0;
+        color: $base-color;
+      }
+      p{
+        
+        font-style: italic;
+        font-size: 16px;
+        color: $base-color;
+  }
+}
+
+
 /***************************************/
 /*=========    about    =========*/
 /*************************************/
 
 .about{
-  background: #212121;
-  margin-top: 0;
+    background: url(../imagenes/banner.jpg) center center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    
+    
   
   h3{
-    color: #FF9800;
+    color: white;
     padding: 15px;
   }
 
   p{
-    color: #FF9800;
+    color: white;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    text-shadow: 1px;
   }
 }
 
 figure{
-  width: 82%;
-  margin: auto;
+    width: 70%;
+    margin: auto;
 
 }
 
 .foto{
-    max-width: 90%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 5%;
     border: 1px black solid;
 }
 
 .separador{
-  padding: 30px;
+    padding: 30px;
 }
 
 
 
-/**************************************/
-/*=========     PORTFOLIO     =========*/
-/**************************************/
-
 
 
 /************************************/
-/*=========     ABOUT     =========*/
+/*=========     Contact    =========*/
 /**********************************/
 
+#Contact{
+   background: url(../images/map-image.png) no-repeat center 100px #222;
+}
+
+.section-title{
+    color: $base-color;
+    margin-top: 0;
+}
+.text-muted{
+    color: $base-color;
+    padding: 10px;
+}
+
+#contact-form{
+  .form-control{
+    padding: 0 20px;
+    font-family: $third-font;
+    height: 65px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  textarea{
+    &.form-control{
+      padding: 20px;
+      height: ((65*3)+(20*2))*1px;
+    }
+  }
+  .btn-lg{
+    padding: 20px 30px;
+    color: #fff;
+    @include b-ra(8);
+    }
+}
 
 
 
@@ -210,5 +312,106 @@ figure{
 
 
 /***********************************/
-/*=========     TEAM     =========*/
+/*=========     Footer    =========*/
 /*********************************/
+
+
+.footer {
+  background: $fourth-color;
+  .container{
+  height: 100%;   
+  }
+  .text-center{
+    padding: 20px;
+  }
+
+li:nth-child(1) {
+    background: #334681;
+}
+li:nth-child(2) {
+    background: black;
+}
+li:nth-child(3) {
+    background: #5373A6;
+}
+li:nth-child(4) {
+    background: #03639F;
+}
+li:nth-child(5) {
+    background: #B41D12;
+}
+
+  div{
+    p{
+      color: $base-color;
+    }
+  }
+}
+
+.iconos1 {
+  font-size: 25px;
+  color: white;
+  line-height: 38px;
+       
+   }
+
+.iconos li {
+  display: inline-block;
+  margin: 6px;
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 40px;
+  width: 40px; 
+
+  a{
+    display: block;
+    @include b-ra(50%);
+    @include ttion(600ms);
+    &:hover{
+      @include spin(360deg);
+      background-color: $base-color;
+      color: #222;
+     }
+  }
+}
+
+
+/***********************************/
+/*=========     carta    =========*/
+/*********************************/
+
+
+.contenedorc{
+  width: 98%;
+  height: 350px;
+  margin: auto;
+  -webkit-perspective: 700;
+}
+
+.carta{
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 2s;
+}
+
+.carta:hover{
+  transform: rotateY(180deg);   
+}
+
+.lado{
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.frente{
+  border-radius: 5%;
+}
+
+.atras{
+  transform: rotateY(180deg);
+  border-radius: 5%;
+}
